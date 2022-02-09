@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+
+    <script>
+        var song = new Audio('assets/music/sample.mp3');
+
+        //Plays the song. Just pass the id of the audio element.
+        function playpause(id){
+
+        if (!song.paused) {
+            song.pause();
+            document.getElementById("logo-img").src = "assets/logo/logo-gray.png";
+        } else {
+            song.play();
+            document.getElementById("logo-img").src = "assets/logo/logo-rainbow.png";
+        }
+    }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" 
+        type="image/png"
+        href="favicon.ico">
+    <title>starfish deathsquad</title>
+</head>
+<body>
+    <!-- Signature -->
+    <div onclick="playpause('logo')" id="logo">
+        <img id="logo-img" src="assets/logo/logo-gray.png">
+    </div>
+<!-- 
+    <div id="music" onclick="playpause('music')">
+        
+    </div> -->
+
+    <div id="bio">
+        <p>starfish deathsquad is a mysterious and ultra-powerful music producer located in the northeastern forests of massachusetts. harnessing a vast range of natural and digital sounds at high tempo, he combines influences from old-school electronic subgenres like drum-n-bass and chiptune with rock guitars, trap hi-hats, and loud 808s. The kingly archduke of science and power welcomes you to his webpage; his work and contact information can be found by following the links below.</p>
+    </div>
+
+    <!-- Links -->
+    <div class="links-row">
+        <div id="spotify" class="buttons">
+            <a href="https://open.spotify.com/artist/3QnXbLgy0nmHiJzSkQCM6I?si=8JtT1Hr9TtutBHldjxL1qg&nd=1"><img id="spotify-img" src="assets/icons/spotify.png"></a>
+        </div>
+        <div id="apple" class="buttons">
+            <a href="https://music.apple.com/us/artist/starfish-deathsquad/1584500713"><img id="apple-img" src="assets/icons/applemusic.png"/></a>
+        </div>
+    </div>
+    <div class="links-row">
+        <div id="youtube" class="buttons">
+            <a href="https://music.youtube.com/playlist?list=OLAK5uy_krMYUsdgbc0_CPEAKPTOJnBYMEvUSx438"><img id="youtube-img" src="assets/icons/youtubemusic.png"</a>
+        </div>
+        <div id="beatstars" class="buttons">
+            <a href="https://www.beatstars.com/starfish_deathsquad"><img id="beatstars-img" src="assets/icons/beatstars.png"></a>
+        </div>
+    </div>
+    <div class="links-row">
+        <div id="instagram" class="buttons">
+            <a href="https://www.instagram.com/starfish.deathsquad/"><img id="instagram-img" src="assets/icons/instagram.png"></a>
+        </div>
+        <div id="email" class="buttons">
+            <a href="mailto:starfishdeathsquad@gmail.com"><img id="email-img" src="assets/icons/email.png"></a>
+        </div>
+    </div>
+    <div class="sitesbysamchambers">
+        <a class="samchambers" href="https://sitesbysam.dev">sitesbysam</a>
+    </div>
+ 
+</body>
+
+<style>
+
+    /* @font-face {
+        font-family: 'bio';
+        src: url(assets/fonts/greatvictorian/GreatVictorian-Swashed.otf);
+    } */
+
+    html {
+        cursor: url(assets/cursor/blue.cur), auto !important;
+    }
+
+    body {
+        /* background: rgb(0, 0, 0); */
+        background: url("assets/background.png");
+        background-size: cover;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        letter-spacing: 2px;
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #logo {
+        display: flex;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 75%;
+        max-height: auto;
+    } #logo img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        
+    }
+
+    /* #music {
+        width: 300px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 5px solid black;
+        background-image: url(assets/music/play.png);
+        background-size: contain;
+        padding-bottom: 10px;
+    } */
+
+    #bio {
+        text-align: justify;
+        font-size: 100%;
+        font-size-adjust: none;
+        /* font-family: 'bio'; */
+        background-color: white;
+        border: 5px solid black;
+        margin-bottom: 20px;
+        padding: 5px;
+    } #bio:hover {
+        background-color: black;
+        color: white;
+        border-color: white;
+    }
+
+    .links-row {
+        padding-bottom: 25px;
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+    } .buttons {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 30%;
+        max-height: 30%;
+        border: 5px solid rgb(0, 0, 0);
+        text-decoration: none;
+        background-color: rgb(255, 255, 255);
+        cursor: url(assets/cursor/purple.cur), auto !important;
+    } .buttons img {
+        max-width: 100%;
+        max-height: 100%;
+        cursor: url(assets/cursor/purple.cur), auto !important;
+    }
+
+    #spotify:hover {
+        background-color: rgb(21, 233, 14);
+    } #spotify-img:hover {
+        /* cursor: url(assets/purple.cur); */
+    }
+    #apple:hover {
+        background-color: rgb(59, 119, 247);
+    } #apple-img:hover {
+        /* cursor: url(assets/purple.cur); */
+    }
+    #youtube:hover {
+        background-color: rgb(255, 0, 0);
+    } #youtube-img:hover {
+        /* cursor: url(assets/purple.cur);     */
+    }
+    #beatstars:hover {
+        background-color: rgb(255, 0, 0);
+    } #beatstars-img:hover {
+        /* cursor: url(assets/purple.cur);     */
+    }
+    #instagram:hover {
+        background-color: rgb(233, 93, 226);
+    } #instagram-img:hover {
+        /* cursor: url(assets/purple.cur);     */
+    }
+    #email:hover {
+        background-color: rgb(255, 115, 0);
+    } #email-img:hover {
+        /* cursor: url(assets/purple.cur);     */
+    }
+
+    
+
+    .sitesbysamchambers {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        cursor: url(assets/cursor/purple.cur), auto !important;
+    }   .samchambers {
+        color: rgba(255, 255, 255, 0.74);
+        text-decoration: underline;
+        cursor: url(assets/cursor/purple.cur), auto !important;
+    }
+</style>
+
+</html>
